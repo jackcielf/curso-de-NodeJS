@@ -1,0 +1,23 @@
+<h2 class="pt-3">Lista de postagens:</h2>
+<hr />
+<a href="/admin/postagem/add"<button class='btn btn-success'>Nova postagem</button></a>
+
+{{#each postagem}}
+	<div class="card mt-4">
+		<div class="card-body">
+			<h4>{{titulo}}</h4>
+			<span class="d-block">Descrição: {{descricao}}</span>
+			<span class="d-block">Conteúdo: {{conteudo}}</span>
+			<small class="d-block">Categoria: {{categoria.nome}}</small>
+			<small><small class="text-secondary d-block">Data: {{data}}</small></small>
+			<a href="/admin/postagem/editar/{{_id}}">
+				<button class="btn btn-primary mt-3 d-block">Editar</button>
+			</a>
+			<a href="/admin/postagem/deletar/{{_id}}">
+				<button class="btn btn-danger mt-3 d-block">Deletar</button>
+			</a>
+		</div>
+	</div>
+{{else}}
+
+{{/each}}
